@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
+  
+  body {
+    @apply bg-gray-900 text-white;
+  }
+}
+
+@layer utilities {
+  .bg-gradient-overlay {
+    background: linear-gradient(to bottom, rgba(17, 24, 39, 0.8), rgba(17, 24, 39, 1));
+  }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+}
+
+/* Supabase Auth UI Customization */
+.supabase-container {
+  @apply w-full;
+}
+
+.supabase-button {
+  @apply w-full py-3 px-4 rounded-lg font-medium transition-colors !important;
+}
+
+.supabase-button[data-provider="google"] {
+  @apply bg-white text-gray-900 hover:bg-gray-100 !important;
+}
+
+.supabase-input {
+  @apply w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 !important;
+}
+
+.supabase-label {
+  @apply block text-sm font-medium mb-2 !important;
+}
+
+.supabase-message {
+  @apply text-sm !important;
+}
+
+.supabase-message[data-error="true"] {
+  @apply text-red-400 !important;
+}
+
+/* Smooth scroll animation for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
